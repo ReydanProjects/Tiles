@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiles</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+	<link href="styles/fontawesome.min.css" rel="stylesheet">
+    <link href="styles/solid.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <script src="scripts/dexie.min.js"></script>
+    <script src="scripts/color.js"></script>
+    <script defer src="scripts/main.js"></script>
+</head>
+<body data-night-mode="false" data-daily-image="false">
+    <div class="container overlay">
+        <header role="banner">
+            <button id="btn-menu" class="btn btn-fixed" type="button"><i class="fa-solid fa-gear"></i></button>
+            <div id="btn-edit">
+                <div class="input-container">
+                    <input id="input-edit" type="checkbox">
+                    <label for="input-edit" class="btn btn-fixed"></label>
+                </div>
+            </div>
+        </header>
+
+        <section id="tiles" role="main" data-action="show">
+            <button id='btn-add' class="btn btn-lg hidden" type="button" autofocus><i class="fa-solid fa-plus fa-lg"></i></button>
+        </section>
+
+        <aside id="tilebar" data-action="hide">
+            <nav id="tilebar-header" role="navigation">
+                <button name="btn-back" class="btn btn-sm" type="button"><i class="fa-solid fa-chevron-left"></i></button>
+                <span class="title text-upper-case"></span>
+                <button name="btn-save" class="btn btn-sm" type="button"><i class="fa-solid fa-check"></i></button>
+            </nav>
+			<div class="scroll-container">
+                <div id="tilebar-content">
+                    <nav>
+						<input id="tile-id" value="" type="hidden" />
+						<input id="tile-position" value="" type="hidden" />
+                        <ul class="menu">
+							<li class="nav-item">
+                				<input id="tile-title" class="form-styling" type="text" placeholder="Tile Title" />
+                            </li>
+							<li class="nav-item">
+                				<input id="tile-location" class="form-styling" type="text" placeholder="URL" />
+                            </li>
+							<li class="nav-item">
+                				<textarea id="tile-description" class="form-styling" rows="5" placeholder="Tile Description"></textarea>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Tile Width</span>
+								<div class="input-container">
+									<input id="tile-width" class="slider" type="range" min="1" max="5" step="1" value="1">
+									<label for="tile-width"></label>
+								</div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Tile Height</span>
+								<div class="input-container">
+									<input id="tile-height" class="slider" type="range" min="1" max="5" step="1" value="1">
+									<label for="tile-height"></label>
+								</div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Orientation</span>
+								<div class="input-container">
+									<input id="tile-rotated" class="custom-checkbox simple-checkbox" type="checkbox">
+									<label for="tile-rotated" data-onlabel="Hor" data-offlabel="Vert"></label>
+								</div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Tile Borders</span>
+								<div class="input-container">
+									<input id="tile-bordered" class="custom-checkbox" type="checkbox">
+									<label for="tile-bordered" data-onlabel="On" data-offlabel="Off"></label>
+								</div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Rounded Corners</span>
+								<div class="input-container">
+									<input id="tile-rounded" class="custom-checkbox" type="checkbox">
+									<label for="tile-rounded" data-onlabel="On" data-offlabel="Off"></label>
+								</div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Opacity</span>
+								<div class="input-container">
+									<input id="tile-opacity" class="slider" type="range" min="0" max="255" step="51" value="255">
+									<label for="tile-opacity"></label>
+								</div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Background Blur</span>
+								<div class="input-container">
+									<input id="tile-blur" class="custom-checkbox" type="checkbox">
+									<label for="tile-blur" data-onlabel="On" data-offlabel="Off"></label>
+								</div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Tile Shadow</span>
+								<div class="input-container">
+									<input id="tile-shadow" class="custom-checkbox" type="checkbox">
+									<label for="tile-shadow" data-onlabel="On" data-offlabel="Off"></label>
+								</div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Background Color</span>
+								<div class="input-container">
+									<input id="tile-color" class="color-picker" type="color" value="#04AA6D">
+								</div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Random Color</span>
+                                <button name="btn-random-color" class="btn btn-rounded" type="button"><i class="fa-solid fa-paint-brush fa-lg"></i>+</button>
+                            </li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+        </aside>
+
+        <aside id="sidebar" data-action="hide">
+            <nav id="sidebar-header" role="navigation">
+                <button name="btn-back" class="btn btn-sm" type="button"><i class="fa-solid fa-angle-left"></i></button>
+                <span class="title text-upper-case">Settings</span>
+                <div class="input-container">
+                    <input name="btn-import" id="btn-import" type="file" accept="application/json">
+                    <label for="btn-import" class="btn btn-sm"><i class="fa-solid fa-arrow-down"></i></label>
+                </div>
+                <a name="btn-export" class="btn btn-sm" href="#" type="button"><i class="fa-solid fa-arrow-up"></i></a>
+                <button name="btn-save" class="btn btn-sm" type="button"><i class="fa-solid fa-check"></i></button>
+            </nav>
+            <div class="scroll-container">
+                <div id="sidebar-content">
+                    <nav>
+                        <ul class="menu">
+                            <li class="nav-header">
+                                <i class="icon fa-solid fa-mountain-sun"></i><span class="title text-upper-case">Background</span>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Background Image</span>
+                                <div class="input-container">
+                                    <input id="bg-image" type="file" accept="image/*">
+                                    <label for="bg-image" class="btn btn-rounded"><span class="content">Browse</span></label>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Daily Image</span>
+                                <div class="input-container">
+                                    <input id="daily-image" class="custom-checkbox" type="checkbox">
+                                    <label for="daily-image" data-onlabel="On" data-offlabel="Off"></label>
+                                </div>
+                            </li>
+                            <li class="nav-header">
+                                <i class="icon fa-solid fa-border-top-left"></i><span class="title text-upper-case">Grid</span>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Number of Columns</span>
+                                <div class="input-container">
+                                    <input id="grid-cols" class="slider" type="range" min="0" max="8" step="1" value="0">
+                                    <label for="grid-cols"></label>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Cell Size</span>
+                                <div class="input-container">
+                                    <input id="cell-size" class="slider" type="range" min="100" max="200" step="20" value="100">
+                                    <label for="cell-size"></label>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Gap Size</span>
+                                <div class="input-container">
+                                    <input id="grid-gap" class="slider" type="range" min="0" max="100" step="10" value="20">
+                                    <label for="grid-gap"></label>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Horizontal Alignment</span>
+                                <div class="input-container">
+                                    <input id="grid-align-h" class="slider" type="range" min="0" max="2" step="1" value="1">
+                                    <label for="grid-align-h"></label>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Vertical Alignment</span>
+                                <div class="input-container">
+                                    <input id="grid-align-v" class="slider" type="range" min="0" max="2" step="1" value="1">
+                                    <label for="grid-align-v"></label>
+                                </div>
+                            </li>
+                            <li class="nav-header">
+                                <i class="icon fa-solid fa-square"></i><span class="title text-upper-case">Tiles</span>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Orientation</span>
+                                <div class="input-container">
+                                    <input id="tiles-rotated" class="custom-checkbox simple-checkbox" type="checkbox">
+                                    <label for="tiles-rotated" data-onlabel="Hor" data-offlabel="Vert"></label>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Tile Borders</span>
+                                <div class="input-container">
+                                    <input id="tiles-bordered" class="custom-checkbox" type="checkbox">
+                                    <label for="tiles-bordered" data-onlabel="On" data-offlabel="Off"></label>
+                                </div>
+                            </li>
+							<li class="nav-item">
+                                <span class="title">Rounded Corners</span>
+                                <div class="input-container">
+                                    <input id="tiles-rounded" class="custom-checkbox" type="checkbox">
+                                    <label for="tiles-rounded" data-onlabel="On" data-offlabel="Off"></label>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Opacity</span>
+                                <div class="input-container">
+                                    <input id="tiles-opacity" class="slider" type="range" min="0" max="255" step="51" value="255">
+                                    <label for="tiles-opacity"></label>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Background Blur</span>
+                                <div class="input-container">
+                                    <input id="tiles-blur" class="custom-checkbox" type="checkbox">
+                                    <label for="tiles-blur" data-onlabel="On" data-offlabel="Off"></label>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Tile Shadow</span>
+                                <div class="input-container">
+                                    <input id="tiles-shadow" class="custom-checkbox" type="checkbox">
+                                    <label for="tiles-shadow" data-onlabel="On" data-offlabel="Off"></label>
+                                </div>
+                            </li>
+                            <li class="nav-header">
+                                <i class="icon fa-solid fa-sliders"></i><span class="title text-upper-case">Miscellaneous</span>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Accent Color 1</span>
+                                <div class="input-container">
+                                    <input id="accent-color1" class="color-picker" type="color" value="#04AA6D">
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Accent Color 2</span>
+                                <div class="input-container">
+                                    <input id="accent-color2" class="color-picker" type="color" value="#04AA6D">
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span class="title">Night Mode</span>
+                                <div class="input-container">
+                                    <input id="night-mode" class="custom-checkbox" type="checkbox">
+                                    <label for="night-mode" data-onlabel="On" data-offlabel="Off"></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="sidebar-footer">
+                <span class="content">Tiles v0.22.09</span>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

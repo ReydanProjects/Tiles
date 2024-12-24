@@ -1,0 +1,223 @@
+[
+  {
+    "id": "to94me0nrapq5mquvx1nuzt",
+    "title": "Harvard University",
+    "location": "https://cs50.harvard.edu/x/2024/",
+    "color": "#CD57F4CC",
+    "size": {
+      "width": "1",
+      "height": "3"
+    },
+    "position": 0,
+    "description": "This is CS50, Harvard University’s introduction to the intellectual enterprises of computer science and the art of programming, for concentrators and non-concentrators alike, with or without prior programming experience. (Two thirds of CS50 students have never taken CS before.) This course teaches you how to solve problems, both with and without code, with an emphasis on correctness, design, and style.",
+    "style": "54"
+  },
+  {
+    "id": "th8ndpm2whmro6us4rxyvri",
+    "title": "T",
+    "location": "",
+    "color": "#11EC38CC",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 1,
+    "description": "",
+    "style": "22"
+  },
+  {
+    "id": "tr7bbb3y72ndvgu0iwneyrm",
+    "title": "H",
+    "location": "",
+    "color": "#CD250BCC",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 2,
+    "description": "",
+    "style": "22"
+  },
+  {
+    "id": "tyz08ajcqqsavypy1xvzyhh",
+    "title": "I",
+    "location": "",
+    "color": "#48E612CC",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 3,
+    "description": "",
+    "style": "22"
+  },
+  {
+    "id": "t3nnh858j0k5ck2pbalvi",
+    "title": "S",
+    "location": "",
+    "color": "#043927CC",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 4,
+    "description": "",
+    "style": "22"
+  },
+  {
+    "id": "tr8zmks7mq49oso876fyre",
+    "title": "",
+    "location": "",
+    "color": "#04392700",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 5,
+    "description": "",
+    "style": "16"
+  },
+  {
+    "id": "tcdl3svb559fnzndsnggmgd",
+    "title": "I",
+    "location": "",
+    "color": "#6441C6CC",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 6,
+    "description": "",
+    "style": "22"
+  },
+  {
+    "id": "to5wgrlshpfcf1188ok05f",
+    "title": "S",
+    "location": "",
+    "color": "#6F247CCC",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 7,
+    "description": "",
+    "style": "22"
+  },
+  {
+    "id": "t3fww7lfbtbbdlgvtsahlsg",
+    "title": "",
+    "location": "",
+    "color": "#04392700",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 8,
+    "description": "",
+    "style": "16"
+  },
+  {
+    "id": "tt3gln99s30kum3curqfyd",
+    "title": "",
+    "location": "",
+    "color": "#04392700",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 9,
+    "description": "",
+    "style": "16"
+  },
+  {
+    "id": "ty97d6swcynintsod98m26j",
+    "title": "",
+    "location": "",
+    "color": "#04392700",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 10,
+    "description": "",
+    "style": "16"
+  },
+  {
+    "id": "tx9dpdwbujn6kqd4gyr9a",
+    "title": "C",
+    "location": "",
+    "color": "#039F2CCC",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 11,
+    "description": "",
+    "style": "22"
+  },
+  {
+    "id": "tg1u06pnzrb4c74rpur3d1",
+    "title": "S",
+    "location": "",
+    "color": "#B22E65CC",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 12,
+    "description": "",
+    "style": "22"
+  },
+  {
+    "id": "tv9g0d42zqe1vvl19gyyqi",
+    "title": "by",
+    "location": "",
+    "color": "#E04676CC",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 13,
+    "description": "",
+    "style": "22"
+  },
+  {
+    "id": "ta3acnf1nwm714gdil516y4",
+    "title": "",
+    "location": "",
+    "color": "#04392700",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 14,
+    "description": "",
+    "style": "16"
+  },
+  {
+    "id": "ttn2pp0b0nodnkymkbdyr8",
+    "title": "50",
+    "location": "",
+    "color": "#E9542DCC",
+    "size": {
+      "width": "2",
+      "height": "1"
+    },
+    "position": 15,
+    "description": "CS50’s Introduction to Computer Science",
+    "style": "22"
+  },
+  {
+    "id": "t2ukkeb0ah6a6dhoi3p8dzc",
+    "title": "",
+    "location": "",
+    "color": "#04392700",
+    "size": {
+      "width": "1",
+      "height": "1"
+    },
+    "position": 16,
+    "description": "",
+    "style": "16"
+  }
+]
