@@ -77,11 +77,10 @@
    - Нажмите кнопку <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/arrow-up.svg" width="16" height="16" alt="Import Icon"> В верхней правой части панели.
    - В появившемся диалоговом окне выберите .json файл с плитками для загрузки и нажмите кнопку "Открыть".
 
+
 #### Демо видео:
 ---
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=OpcgeqZZmnk" 
-        title="Tiles" frameborder="0" allowfullscreen>
-</iframe>
+[![TILES](./images/1.png)](https://www.youtube.com/watch?v=OpcgeqZZmnk)
 
 
 #### Структура проекта
