@@ -80,7 +80,7 @@
 
 #### Демо видео:
 ---
-[![TILES](./images/1.png)](https://www.youtube.com/watch?v=OpcgeqZZmnk)
+[![TILES](./images/2.png)](https://www.youtube.com/watch?v=OpcgeqZZmnk)
 
 
 #### Структура проекта
